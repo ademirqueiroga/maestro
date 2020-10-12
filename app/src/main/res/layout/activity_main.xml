@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <com.admqueiroga.maestro.PlayerView
+        android:id="@+id/player1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/player2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.admqueiroga.maestro.PlayerView
+        android:id="@+id/player2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/player1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.admqueiroga.maestro.PlayerView
+        android:id="@+id/player3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/player1"
+        app:layout_constraintStart_toEndOf="@+id/player1"
+        app:layout_constraintStart_toStartOf="@id/player1"
+        app:layout_constraintTop_toBottomOf="@id/player1" />
+
+    <com.admqueiroga.maestro.PlayerView
+        android:id="@+id/player4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/player3"
+        app:layout_constraintTop_toBottomOf="@+id/player2" />
+
+    <com.admqueiroga.maestro.PlayerView
+        android:id="@+id/player5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/player4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/player4" />
+
+    <com.admqueiroga.maestro.PlayerView
+        android:id="@+id/player6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/player5"
+        app:layout_constraintTop_toBottomOf="@+id/player4" />
+
+    <ImageButton
+        android:id="@+id/maestro_play_pause"
+        android:layout_width="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_height="48dp"
+        android:src="@android:drawable/ic_media_play"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/player6" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/maestro_seek_bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/maestro_play_pause"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/maestro_play_pause"
+        app:layout_constraintTop_toBottomOf="@id/player6"
+        app:layout_constraintTop_toTopOf="@id/maestro_play_pause" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
