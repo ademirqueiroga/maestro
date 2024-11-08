@@ -1,3 +1,3 @@
 # Maestro
 
-An Android app that plays synchronized audio tracks. For example, to play multiple stems files keeping them synced.
+This is a POC Android app that plays synchronized audio tracks using the NDK. It can, for example, play multiple stem files while keeping them synced.
